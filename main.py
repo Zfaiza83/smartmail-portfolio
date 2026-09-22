@@ -31,20 +31,20 @@ HTML_PAGE = """<!DOCTYPE html>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f1117; color: #e2e8f0; min-height: 100vh; padding: 2rem 1rem; }
     header { text-align: center; margin-bottom: 2.5rem; }
-    header h1 { font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #10b981, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    header h1 { font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, #f97316, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     header p { color: #94a3b8; margin-top: 0.5rem; font-size: 0.95rem; }
     .container { max-width: 800px; margin: 0 auto; }
     .card { background: #1e2130; border: 1px solid #2d3148; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
     .card h2 { font-size: 1rem; font-weight: 600; color: #94a3b8; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.05em; }
     label { display: block; font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.4rem; }
     input[type="text"] { width: 100%; background: #0f1117; border: 1px solid #2d3148; border-radius: 8px; color: #e2e8f0; padding: 0.75rem; font-size: 0.9rem; margin-bottom: 0.75rem; transition: border-color 0.2s; }
-    input[type="text"]:focus { outline: none; border-color: #10b981; }
+    input[type="text"]:focus { outline: none; border-color: #f97316; }
     textarea { width: 100%; background: #0f1117; border: 1px solid #2d3148; border-radius: 8px; color: #e2e8f0; padding: 0.875rem; font-size: 0.9rem; resize: vertical; min-height: 160px; line-height: 1.6; transition: border-color 0.2s; }
-    textarea:focus { outline: none; border-color: #10b981; }
+    textarea:focus { outline: none; border-color: #f97316; }
     .examples { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem; }
     .example-btn { padding: 0.35rem 0.75rem; border-radius: 6px; border: 1px solid #2d3148; background: transparent; color: #64748b; cursor: pointer; font-size: 0.78rem; transition: all 0.2s; }
-    .example-btn:hover { border-color: #10b981; color: #10b981; }
-    button.run { margin-top: 1rem; width: 100%; padding: 0.75rem; background: linear-gradient(135deg, #10b981, #3b82f6); border: none; border-radius: 8px; color: white; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+    .example-btn:hover { border-color: #f97316; color: #f97316; }
+    button.run { margin-top: 1rem; width: 100%; padding: 0.75rem; background: linear-gradient(135deg, #f97316, #ec4899); border: none; border-radius: 8px; color: white; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
     button.run:hover { opacity: 0.9; }
     button.run:disabled { opacity: 0.5; cursor: not-allowed; }
     .result-box { display: none; }
@@ -57,14 +57,14 @@ HTML_PAGE = """<!DOCTYPE html>
     .confidence { font-size: 0.8rem; color: #64748b; margin-left: 0.5rem; }
     .response-box { background: #0f1117; border: 1px solid #2d3148; border-radius: 8px; padding: 1rem; font-size: 0.9rem; line-height: 1.7; white-space: pre-wrap; color: #e2e8f0; position: relative; }
     .copy-btn { position: absolute; top: 0.5rem; right: 0.5rem; background: transparent; border: 1px solid #2d3148; border-radius: 6px; color: #94a3b8; padding: 0.25rem 0.6rem; font-size: 0.75rem; cursor: pointer; transition: all 0.2s; }
-    .copy-btn:hover { border-color: #10b981; color: #e2e8f0; }
+    .copy-btn:hover { border-color: #f97316; color: #e2e8f0; }
     .error { background: #2d1b1b; border: 1px solid #7f1d1d; border-radius: 8px; padding: 0.875rem; color: #fca5a5; font-size: 0.875rem; margin-top: 1rem; display: none; }
     .error.visible { display: block; }
     .spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; margin-right: 8px; vertical-align: middle; }
     @keyframes spin { to { transform: rotate(360deg); } }
     .stats { display: flex; gap: 1rem; margin-top: 0.75rem; flex-wrap: wrap; }
     .stat { background: #0f1117; border: 1px solid #2d3148; border-radius: 8px; padding: 0.5rem 0.875rem; font-size: 0.8rem; color: #94a3b8; }
-    .stat strong { color: #10b981; }
+    .stat strong { color: #f97316; }
     footer { text-align: center; margin-top: 2rem; color: #475569; font-size: 0.8rem; }
     .divider { border: none; border-top: 1px solid #2d3148; margin: 1rem 0; }
   </style>
@@ -72,7 +72,7 @@ HTML_PAGE = """<!DOCTYPE html>
 <body>
   <header>
     <h1>✉️ SmartMail</h1>
-    <p>Classification IA + Réponse automatique pour e-commerce — propulsé par Claude</p>
+    <p>Classification IA + Réponse automatique pour e-commerce</p>
   </header>
 
   <div class="container">
@@ -127,7 +127,7 @@ HTML_PAGE = """<!DOCTYPE html>
     </div>
   </div>
 
-  <footer>Projet portfolio — FastAPI + Claude API · Faiza · SmartMail E-commerce</footer>
+  <footer>Projet portfolio — FastAPI + IA · Faiza Z. · SmartMail E-commerce</footer>
 
   <script>
     const examples = {
@@ -333,3 +333,4 @@ Réponse :"""
         summary=summary,
         response=response_text
     )
+
